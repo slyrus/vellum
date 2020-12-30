@@ -73,6 +73,10 @@
       (terpri output))))
 
 
+(defmethod print-object ((object vellum.table:fundamental-table) stream)
+  (show :text object :output stream))
+
+
 (defgeneric join (algorithm method frame-specs &key header class header-class columns
                   &allow-other-keys))
 
